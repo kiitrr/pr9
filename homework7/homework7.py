@@ -9,3 +9,13 @@ def cyclic_shift_right(numbers):
     numbers[0] = last_element  
 
     return numbers
+
+try:
+    count = int(input("Введите количество чисел в списке: "))
+    if count <= 0:
+        raise ValueError("Количество должно быть положительным.")
+
+    numbers = []
+    for _ in range(count):
+        num = float(input("Введите число: "))
+        numbers.append(num)
