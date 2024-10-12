@@ -1,4 +1,5 @@
 import random
+
 ticket = [
     [1, 2, 3, 4, 5],
     [6, 7, 8, 9, 10],
@@ -23,3 +24,14 @@ def get_user_numbers():
                 print("Некорректный ввод. Пожалуйста, введите число.")
     return user_numbers
 
+def generate_random_numbers():
+    """Генерирует случайные числа из лотерейного билета."""
+    random_numbers = []
+    for row in ticket:
+        random_numbers.append(random.choice(row))
+    return random_numbers
+
+def compare_numbers(user_numbers, random_numbers):
+    """Сравнивает числа пользователя и случайные числа."""
+    matches = set(user_numbers) & set(random_numbers)
+    return matches
