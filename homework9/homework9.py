@@ -13,3 +13,13 @@ def parse_email(email):
     else:
         return None, None
 
+
+email_input = input("Введите ваш email: ")
+username, domain = parse_email(email_input)
+
+if username and domain:
+    print(f"Имя пользователя: {username}, Домен: {domain}")
+else:
+    print("Некорректный email. Пожалуйста, попробуйте снова.")
+
+
