@@ -6,3 +6,9 @@ while True:
     if user_input.lower() == 'end':
         break  
     
+    try:
+        
+        number = int(user_input)
+        numbers.append(number)
+    except ValueError:
+        print("Пожалуйста, введите корректное целое число.")
