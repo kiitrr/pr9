@@ -14,4 +14,14 @@ def get_squares(a, b):
 
 try:
     a = int(input("Введите первое целое число (a): "))
-    b = int(input("Введите второе целое число (b): "))    
+    b = int(input("Введите второе целое число (b): "))
+    
+    
+    squares_list = get_squares(a, b)
+    
+    
+    print(f"Квадраты целых чисел между {a} и {b}: {squares_list}")
+
+except ValueError as e:
+    print(f"Ошибка ввода: {e}")
+
