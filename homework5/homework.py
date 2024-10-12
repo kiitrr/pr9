@@ -13,3 +13,11 @@ def input_numbers():
             break  
         except ValueError:
             print("Пожалуйста, введите корректные числа, разделенные пробелами.")
+    
+    return numbers
+
+def find_greater_than_previous(numbers):
+    
+    def is_greater_by_one(current, previous):
+        return current == previous + 1
+
