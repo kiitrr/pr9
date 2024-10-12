@@ -19,3 +19,11 @@ try:
     for _ in range(count):
         num = float(input("Введите число: "))
         numbers.append(num)
+
+    print("Исходный список:", numbers)
+
+    shifted_numbers = cyclic_shift_right(numbers)
+    print("Список после циклического сдвига вправо:", shifted_numbers)
+
+except ValueError as ve:
+    print("Ошибка ввода:", ve)
