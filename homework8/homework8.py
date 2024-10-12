@@ -35,3 +35,13 @@ def compare_numbers(user_numbers, random_numbers):
     """Сравнивает числа пользователя и случайные числа."""
     matches = set(user_numbers) & set(random_numbers)
     return matches
+
+user_numbers = get_user_numbers()
+random_numbers = generate_random_numbers()
+
+print("Ваши числа:", user_numbers)
+print("Случайно выбранные числа:", random_numbers)
+
+matches = compare_numbers(user_numbers, random_numbers)
+print("Совпадения:", matches)
+print(f"Количество совпадений: {len(matches)}")
